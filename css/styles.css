@@ -105,7 +105,6 @@ a {
 /* логотип */
 .logo {
   color: #000000;
-  font-family: Raleway;
   font-size: 26px;
   line-height: 1.2;
   font-weight: 700;
@@ -181,6 +180,30 @@ a {
   fill: var(--primary-text-color);
   /* outline: 2px solid red; */
 }
+
+/* .bt-studio{
+border-bottom: #2196f3 4px solid;
+border-radius: 4px;
+} */
+
+.bt-studio,
+.bt-portfolio {
+  position: relative;
+}
+
+.bt-studio::after,
+.bt-portfolio::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+
+  bottom: -100%;
+  left: 0%;
+}
+
 /*========= hero ===========*/
 
 .hero {
@@ -335,6 +358,27 @@ a {
   margin-right: auto;
   justify-content: center;
 }
+
+.about-img {
+  position: relative;
+}
+
+.about-legend {
+  position: absolute;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  /* letter-spacing: 0.03em; */
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  padding: 27px;
+  bottom: 0;
+}
+
 .about {
   width: var(--box-sizing);
 }
@@ -343,7 +387,7 @@ a {
 
 .section-title-team {
   padding-top: 94px;
-  background: #F5F4FA;
+  background: #f5f4fa;
   padding-bottom: 94px;
 }
 
@@ -421,14 +465,13 @@ a {
 /* .social {
   display: flex;
   flex-direction: column;
-  /* width: 270px; */
-  /*height: 44px; */
+  width: 270px;
+  height: 44px;
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
   margin: auto;
-}
-
+} */
 
 .social-cart {
   width: 44px;
@@ -438,7 +481,8 @@ a {
   margin: 0;
   fill: var(--primary-text-color);
   /* outline: 2px solid red; */
-} */
+}
+*/
 
 /* .icon-social {
   width: 20px;
@@ -452,8 +496,8 @@ a {
   background-color: var(--accent-text-color);
   fill: #ffffff;
 } */
-.item-team{
-    display: flex;
+.item-team {
+  display: flex;
   justify-content: center;
   gap: 10px;
 }
@@ -469,16 +513,19 @@ a {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: #AFB1B8;
+  fill: #afb1b8;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
-.social-link:focus{
+.social-link:focus {
   background-color: var(--accent-text-color);
-  fill:#ffffff
+  fill: #ffffff;
 }
 
 /* ===============================KLIENT======================= */
@@ -525,23 +572,41 @@ border-radius: 4px; */
   justify-content: center;
   align-items: center;
   object-fit: fill;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
   /* outline: 2px solid blue; */
 }
 .icon-klient {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .icon-team {
   flex: var(--primary-text-color);
 }
 
+.linkpo {
+}
 
+.klient-package,
+.linkpo,
+.icon-klient
+.klient-package,
+.card-company {
+  }
 
+/* .klient-package:hover, */
 .card-company:hover,
-.linkpo:hover,
-.linkpo:hover .icon-klient {
+/* .linkpo:hover, */
+.card-company:hover  .icon-klient {
   border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
@@ -579,6 +644,10 @@ border-radius: 4px; */
   justify-content: start;
   gap: 10px;
 }
+
+
+
+
 .section-footer {
   background-color: #2f303a;
 }
@@ -630,29 +699,32 @@ border-radius: 4px; */
 .footer-social-title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.social-link-footer{
+.social-link-footer {
   width: 44px;
   height: 44px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
+  transition-property: background-color:;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-list :hover,
-.footer-social-list :focus {
+.social-link-footer:hover,
+.social-link-footer:focus {
   background-color: var(--accent-text-color);
-  border-radius: 50%;
 }
+
 
 /* =======================================Portfolio========================================= */
 
