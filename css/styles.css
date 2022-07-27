@@ -918,6 +918,7 @@ border-radius: 4px; */
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
   border-radius: 50%;
   right: 8px;
   top: 8px;
